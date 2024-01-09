@@ -1,6 +1,6 @@
 # Microservices Lab
 
-Microservices Lab Description
+Microservices Basics
 
 
 ## Build LABs using Docker
@@ -49,6 +49,11 @@ Docsy is being enhanced using [docsy-plus](https://github.com/acend/docsy-plus/)
 [docsy-acend](https://github.com/acend/docsy-acend/) and [docsy-puzzle](https://github.com/puzzle/docsy-puzzle/)
 for brand specific settings.
 
+After cloning the main repo, you need to initialize the Hugo Module like this:
+
+```bash
+hugo mod get
+```
 
 The default configuration uses the puzzle setup from [config/_default](config/_default/config.toml).
 Further, specialized environments can be added in the `config` directory.
@@ -65,22 +70,22 @@ Further, specialized environments can be added in the `config` directory.
 Run the following command to update all submodules with their newest upstream version:
 
 ```bash
-git submodule update --remote
+hugo mod get -u
 ```
 
 
-### Build hugo website container using Docker
+### Build using Docker
 
 Build the image:
 
 ```bash
-docker build -t puzzle/microservices-lab:latest .
+docker build -t acend/microservices-lab .
 ```
 
 Run it locally:
 
 ```bash
-docker run -i -p 8080:8080 puzzle/microservices-lab
+docker run -i -p 8080:8080 acend/microservices-lab
 ```
 
 
@@ -89,13 +94,13 @@ docker run -i -p 8080:8080 puzzle/microservices-lab
 Build the image:
 
 ```bash
-buildah build-using-dockerfile -t puzzle/microservices-lab:latest .
+buildah build-using-dockerfile -t acend/microservices-lab .
 ```
 
 Run it locally with the following command. Beware that `--rmi` automatically removes the built image when the container stops, so you either have to rebuild it or remove the parameter from the command.
 
 ```bash
-podman run --rm --rmi --interactive --publish 8080:8080 localhost/puzzle/microservices-lab
+podman run --rm --rmi --interactive --publish 8080:8080 localhost/acend/microservices-lab
 ```
 
 
@@ -117,14 +122,21 @@ docker run \
 
 ### Linting of Markdown content
 
-Markdown files are linted with [markdownlint](https://github.com/DavidAnson/markdownlint).
-Custom rules are in [markdownlint.json](markdownlint.json).
-There's a GitHub Action [github/workflows/markdownlint.yaml](github/workflows/markdownlint.yaml) for CI.
+Markdown files are linted with <https://github.com/DavidAnson/markdownlint>.
+Custom rules are in `.markdownlint.json`.
+There's a GitHub Action `.github/workflows/markdownlint.yaml` for CI.
 For local checks, you can either use Visual Studio Code with the corresponding extension, or the command line like this:
 
-```bash
+```shell script
 npm install
-node_modules/.bin/markdownlint content
+npm run mdlint
+```
+
+Npm not installed? no problem
+
+```bash
+export HUGO_VERSION=$(grep "FROM klakegg/hugo" Dockerfile | sed 's/FROM klakegg\/hugo://g' | sed 's/ AS builder//g')
+docker run --rm --interactive -v $(pwd):/src klakegg/hugo:${HUGO_VERSION}-ci /bin/bash -c "set -euo pipefail;npm install; npm run mdlint;"
 ```
 
 
@@ -176,4 +188,4 @@ helm install --dry-run --repo https://acend.github.io/helm-charts/  <release> ac
 
 ### Contributions
 
-If you find errors, bugs or missing information, please help us improve and have a look at the [Contribution Guide](CONTRIBUTING.md).
+If you find errors, bugs or missing information please help us improve and have a look at the [Contribution Guide](CONTRIBUTING.md).

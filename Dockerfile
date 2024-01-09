@@ -12,7 +12,7 @@ RUN apt-get update \
 RUN find /src/public/docs/ -regex '.*\(jpg\|jpeg\|png\|gif\)' -exec mogrify -path /src/public/pdf -resize 800\> -unsharp 0.25x0.25+8+0.065 "{}" \;
 RUN find /src/public/docs/ -regex '.*\(jpg\|jpeg\|png\|gif\)' -exec mogrify -path /src/public -resize 800\> -unsharp 0.25x0.25+8+0.065 "{}" \;
 
-FROM ubuntu:jammy AS wkhtmltopdf
+FROM docker.io/ubuntu:jammy AS wkhtmltopdf
 RUN apt-get update \
     && apt-get install -y curl \
     && curl -L https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb --output wkhtmltox_0.12.6.1-2.jammy_amd64.deb \
@@ -30,9 +30,14 @@ COPY --from=builder /src/public /
 #     --dpi 600 \
 #     /pdf/index.html /pdf.pdf
 
-FROM nginxinc/nginx-unprivileged:1.25-alpine
+FROM docker.io/nginxinc/nginx-unprivileged:1.25-alpine
 
 LABEL maintainer acend.ch
+LABEL org.opencontainers.image.title "acend.ch's Microservices Basics Training"
+LABEL org.opencontainers.image.description "Container with acend.ch's Microservices Basics Training content"
+LABEL org.opencontainers.image.authors acend.ch
+LABEL org.opencontainers.image.source https://github.com/acend/microservices-lab
+LABEL org.opencontainers.image.licenses CC-BY-SA-4.0
 
 EXPOSE 8080
 
