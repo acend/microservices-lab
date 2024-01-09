@@ -1,11 +1,23 @@
 {
   "name": "microservices-training",
+  "version": "1.0.0",
+  "description": "Microservices Basics Training",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acend/microservices-lab.git"
+  },
+  "author": "acend gmbh",
   "scripts": {
+    "start": "bash -c \"docker run --rm --interactive --publish 8080:8080 -v $(pwd):/src:Z klakegg/hugo:$(grep \"FROM klakegg/hugo\" Dockerfile | sed 's/FROM klakegg\\/hugo://g' | sed 's/ AS builder//g') server -p 8080 --bind 0.0.0.0\"",
     "mdlint": "markdownlint --config .markdownlint.json content *.md",
     "prepare": "husky install"
   },
+  "bugs": {
+    "url": "https://github.com/acend/microservices-lab/issues"
+  },
+  "homepage": "https://github.com/acend/microservices-lab#readme",
   "devDependencies": {
-    "husky": "7.0.2",
-    "markdownlint-cli": "0.31.0"
+    "husky": "8.0.3",
+    "markdownlint-cli": "0.38.0"
   }
 }
