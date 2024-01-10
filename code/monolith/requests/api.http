@@ -75,6 +75,32 @@ Content-Type: application/json
 
 ###
 
+# curl --request POST
+#  --url http://127.0.0.1:8080/chaos-monkey
+#  --header 'Content-Type: application/json'
+#  --data '[
+#  {
+#    "clazzName": "ArticleStockService",
+#    "methodName": "orderArticles",
+#    "enabled": true,
+#    "throwException": true
+#  }
+#]'
+POST http://127.0.0.1:8080/chaos-monkey
+Content-Type: application/json
+
+[
+  {
+    "clazzName": "ArticleStockService",
+    "methodName": "orderArticles",
+    "enabled": true,
+    "throwException": true
+  }
+]
+
+###
+
+
 
 
 ###
