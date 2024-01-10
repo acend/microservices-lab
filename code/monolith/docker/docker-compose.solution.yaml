@@ -2,7 +2,7 @@ version: '3'
 
 services:
   application:
-    image: quay.io/puzzle/microservices-lab-monolith-application:latest
+    image: quay.io/acend/microservices-lab-monolith-application:latest
     hostname: monolith
     container_name: monolith-application
     ports:
