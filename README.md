@@ -1,4 +1,4 @@
-# Microservices Lab
+# Microservices Basics Training
 
 Microservices Basics
 

@@ -39,4 +39,4 @@ In a second version we will introduce the `lra-coordinator` and our environment 
 
 ![Environment](rest-lra.png)
 
-[^1]: Eclipse MicroProfile LRA: https://github.com/eclipse/microprofile-lra/blob/master/spec/src/main/asciidoc/microprofile-lra-spec.adoc
+[^1]: Eclipse MicroProfile LRA: https://github.com/eclipse/microprofile-lra/blob/main/spec/src/main/asciidoc/microprofile-lra-spec.asciidoc

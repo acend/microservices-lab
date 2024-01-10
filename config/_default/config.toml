@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Microservices Lab"
+title = "Microservices Basics Training"
 
 enableGitInfo = true
 
@@ -46,7 +46,7 @@ anchor = "smart"
 
 [Languages]
 [Languages.en]
-title = "Microservices Lab"
+title = "Microservices Basics Training"
 languageName = "English"
 weight = 1
 
@@ -72,7 +72,7 @@ url = "https://www.acend.ch"
 
 [params]
 
-copyright = "Puzzle ITC GmbH"
+copyright = "acend GmbH"
 github_repo = "https://github.com/acend/microservices-lab"
 github_branch = "main"
 
