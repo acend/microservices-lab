@@ -12,7 +12,8 @@ sectionnumber: 1
 Following Software is required to run the labs:
 
 * Java 11
-* Docker and Docker-Compose supporting at least version 3 of the compose format[^1].
+* Maven
+* Installed Docker Engine and Docker-Compose supporting at least version 3 of the compose format[^1].
 * Integrated Development Environment IDE. We do recommend [IntelliJ IDEA](https://www.jetbrains.com/idea/).
   * Or any other editor you are comfortable with for editing Java files.
 
@@ -21,6 +22,7 @@ The following access must be available:
 * Lab Pages: https://microservices-lab.training.acend.ch/docs/
 * Docker Registries: [docker.io](https://docker.io) and [quay.io](https://quay.io)
 * Source Repositories: [github.com](https://github.com)
+* Public maven repositories like maven-central.
 
 
 ### Source-Code for Labs

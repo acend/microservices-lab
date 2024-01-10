@@ -88,7 +88,7 @@ lab_rawgit_repo = "https://raw.githubusercontent.com/acend/microservices-lab/mai
 lab_code_basedir = "/code/"
 
 solution_git_repo = "https://github.com/acend/microservices-lab"
-solution_rawgit_repo = "https://raw.githubusercontent.com/acend/microservices-lab/main"
+solution_rawgit_repo = "https://raw.githubusercontent.com/acend/microservices-lab/main/solution"
 solution_code_basedir = "/solution/"
 
 # specify folder structure
