@@ -106,6 +106,9 @@ debezium_docker_repo = "quay.io/debezium"
 labDuration = "four-hours"
 four-hours-text = "Since the time for the labs is limited this step has already been implemented in your version. For a better understanding we encourage you to have a quick read but you may also skip it."
 
+sectionType = "optional"
+optional-text = "The following content is optional. If you have time, feel free to proceed."
+
 [params.ui]
 # Enable to show the side bar menu in its compact state.
 sidebar_menu_compact = false

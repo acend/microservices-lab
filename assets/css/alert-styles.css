@@ -11,3 +11,17 @@
 .alert-duration .alert-heading {
     color: #c98400;
 }
+
+.alert-optional {
+    background-color: #d3edf6;;
+}
+
+.alert-optional {
+    border-style: solid;
+    border-color: #074761FF;
+    border-width: 0 0 0 4px;
+}
+
+.alert-optional .alert-heading {
+    color: #074761FF;
+}

@@ -10,10 +10,10 @@ services:
     ports:
       - 8090:8080
     environment:
-      - THORNTAIL_LOGGING_ROOT-LOGGER.LEVEL=DEBUG
+      - LOG_LEVEL=DEBUG
 
   order:
-    image: quay.io/puzzle/microservices-lab-rest-order:latest
+    image: quay.io/acend/microservices-lab-rest-order:latest
     hostname: order
     container_name: rest-order
     ports:
@@ -29,7 +29,7 @@ services:
       - JAVA_TOOL_OPTIONS=-Dlra.http.host=lra-coordinator -Dlra.http.port=8080
 
   stock:
-    image: quay.io/puzzle/microservices-lab-rest-stock:latest
+    image: quay.io/acend/microservices-lab-rest-stock:latest
     hostname: stock
     container_name: rest-stock
     ports:
