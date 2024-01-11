@@ -98,7 +98,7 @@ folder_kafka = "kafka"
 folder_debezium = "debezium"
 
 # Container repos and naming
-puzzle_docker_repo = "quay.io/puzzle"
+training_docker_repo = "quay.io/acend"
 image_prefix = "microservices-lab-"
 debezium_docker_repo = "quay.io/debezium"
 
