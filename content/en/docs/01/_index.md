@@ -21,7 +21,7 @@ The following access must be available:
 * Lab Pages: https://microservices-lab.training.acend.ch/docs/
 * Docker Registries: [docker.io](https://docker.io) and [quay.io](https://quay.io)
 * Source Repositories: [github.com](https://github.com)
-* Various web resources: like [quarkus.io](https://www.quarkus.io/), [microprofile.io](https://www.microprofile.io/), Google Drive, ... 
+* Various web resources: like [quarkus.io](https://www.quarkus.io/), [microprofile.io](https://www.microprofile.io/), Google Drive, ...
 * Public maven repositories like maven-central.
 
 

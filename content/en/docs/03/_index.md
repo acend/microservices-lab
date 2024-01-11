@@ -35,7 +35,10 @@ Think of a rich article catalog with pictures, thumbnails and a detailed descrip
 
 In the first version we will use the two microservice `order` and `stock`.
 
-In a second version we will introduce the `lra-coordinator` and our environment will look like this.
+![Environment](rest.png)
+
+
+In a second version we will introduce the `lra-coordinator` to handle transactions and our environment will look like this.
 
 ![Environment](rest-lra.png)
 
