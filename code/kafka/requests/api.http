@@ -31,3 +31,38 @@ Content-Type: application/json
 
 ###
 
+
+# curl --request POST
+#  --url http://localhost:8080/shop-orders
+#  --header 'Content-Type: application/json'
+#  --data '{
+#  "articleOrders": [
+#    {
+#      "articleId": 1,
+#      "amount": 20
+#    },
+#    {
+#      "articleId": 2,
+#      "amount": 30
+#    }
+#  ]
+#}'
+POST http://localhost:8080/shop-orders
+Content-Type: application/json
+
+{
+  "articleOrders": [
+    {
+      "articleId": 1,
+      "amount": 20
+    },
+    {
+      "articleId": 2,
+      "amount": 30
+    }
+  ]
+}
+
+###
+
+
