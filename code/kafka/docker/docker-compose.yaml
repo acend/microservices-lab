@@ -40,7 +40,7 @@ services:
       - 5433:5432
 
   stock:
-    image: quay.io/puzzle/microservices-lab-kafka-stock:latest
+    image: quay.io/acend/microservices-lab-kafka-stock:latest
     ports:
       - 8081:8080
     networks:
