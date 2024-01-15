@@ -2,7 +2,7 @@ version: '3'
 
 services:
   order:
-    image: quay.io/puzzle/microservices-lab-debezium-order:latest
+    image: microservices-lab-debezium-order:latest
     hostname: order
     container_name: debezium-order
     ports:
@@ -16,7 +16,7 @@ services:
       - QUARKUS_DATASOURCE_JDBC_URL=jdbc:tracing:postgresql://order-db:5432/admin
 
   stock:
-    image: quay.io/puzzle/microservices-lab-debezium-stock:latest
+    image: quay.io/acend/microservices-lab-debezium-stock:latest
     hostname: stock
     container_name: debezium-stock
     ports:
@@ -30,7 +30,7 @@ services:
       - QUARKUS_DATASOURCE_JDBC_URL=jdbc:tracing:postgresql://stock-db:5432/admin
 
   connect:
-    image: quay.io/puzzle/microservices-lab-debezium-connect:latest
+    image: quay.io/acend/microservices-lab-debezium-connect:latest
     hostname: connect
     container_name: debezium-connect
     ports:
@@ -94,7 +94,7 @@ services:
       - 5433:5432
 
   viewer:
-    image: quay.io/puzzle/microservices-lab-debezium-viewer:latest
+    image: quay.io/acend/microservices-lab-debezium-viewer:latest
     hostname: viewer
     container_name: debezium-viewer
     ports:
@@ -119,7 +119,7 @@ services:
       - 3888:3888
 
   kafka:
-    image: quay.io/puzzle/microservices-lab-debezium-kafka:latest
+    image: quay.io/acend/microservices-lab-debezium-kafka:latest
     hostname: kafka
     container_name: debezium-kafka
     ports:

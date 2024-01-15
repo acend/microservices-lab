@@ -8,7 +8,6 @@ Accept: application/json
 ###
 
 
-
 # Install Order Connector
 # curl --request POST
 #  --url http://localhost:8083/connectors
@@ -68,6 +67,7 @@ Content-Type: application/json
 }
 
 ###
+
 
 # Install Stock Connector
 # curl --request POST
@@ -129,6 +129,60 @@ Content-Type: application/json
 
 ###
 
+
+# List Connectors
+# curl --request GET
+#  --url http://localhost:8083/connectors
+#  --header 'Accept: application/json'
+GET http://localhost:8083/connectors
+Accept: application/json
+
+###
+
+
+# List Article Stock Information
+# curl --request GET
+#  --url http://localhost:8081/article-stocks
+#  --header 'Accept: application/json'
+GET http://localhost:8081/article-stocks
+Accept: application/json
+
+###
+
+# Get Shop Orders
+# curl --request GET
+#  --url http://localhost:8080/shop-orders
+GET http://localhost:8080/shop-orders
+
+###
+
+# Sample Order
+# curl --request POST
+#  --url http://localhost:8080/shop-orders
+#  --header 'Content-Type: application/json'
+#  --data '{
+#	"articleOrders" : [
+#		{
+#			"articleId" : 1,
+#			"amount" : 1
+#		}
+#	]
+#}'
+POST http://localhost:8080/shop-orders
+Content-Type: application/json
+
+{
+  "articleOrders": [
+    {
+      "articleId": 1,
+      "amount": 1
+    }
+  ]
+}
+
+
+###
+
 # Create new Order - Expect COMPLETE
 # curl --request POST
 #  --url http://localhost:8080/shop-orders
@@ -137,7 +191,7 @@ Content-Type: application/json
 #	"articleOrders" : [
 #		{
 #			"articleId" : 1,
-#			"amount" : 3
+#			"amount" : 9
 #		}
 #	]
 #}'

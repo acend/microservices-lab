@@ -2,7 +2,9 @@ version: '3'
 
 services:
   order-db:
-    image: postgres:13
+    image: docker.io/postgres:13
+    hostname: order-db
+    container_name: kafka-order-db
     volumes:
       - order-db-data:/var/lib/postgresql/data/
     networks:
@@ -15,6 +17,8 @@ services:
 
   order:
     image: microservices-lab-kafka-order:latest
+    hostname: order
+    container_name: kafka-order
     ports:
       - 8080:8080
     networks:
@@ -29,6 +33,8 @@ services:
 
   stock-db:
     image: docker.io/postgres:13
+    hostname: stock-db
+    container_name: kafka-stock-db
     volumes:
       - stock-db-data:/var/lib/postgresql/data/
     networks:
@@ -41,6 +47,8 @@ services:
 
   stock:
     image: quay.io/acend/microservices-lab-kafka-stock:latest
+    hostname: stock
+    container_name: kafka-stock
     ports:
       - 8081:8080
     networks:
@@ -56,7 +64,7 @@ services:
   zookeeper:
     image: quay.io/debezium/zookeeper:2.3
     hostname: zookeeper
-    container_name: debezium-zookeeper
+    container_name: kafka-zookeeper
     networks:
       - kafka
     ports:
@@ -67,7 +75,7 @@ services:
   kafka:
     image: quay.io/acend/microservices-lab-debezium-kafka:latest
     hostname: kafka
-    container_name: debezium-kafka
+    container_name: kafka-kafka
     ports:
       - 9092:9092
     networks:
@@ -79,6 +87,8 @@ services:
 
   grafana:
     image: docker.io/grafana/grafana:latest
+    hostname: grafana
+    container_name: kafka-grafana
     ports:
       - 3001:3000
     networks:
@@ -92,6 +102,8 @@ services:
 
   prometheus:
     image: quay.io/prometheus/prometheus:latest
+    hostname: prometheus
+    container_name: kafka-prometheus
     ports:
       - 9090:9090
     networks:
@@ -102,6 +114,8 @@ services:
 
   alertmanager:
     image: quay.io/prometheus/alertmanager:latest
+    hostname: alertmanager
+    container_name: kafka-alertmanager
     ports:
       - 9093:9093
     networks:
@@ -123,6 +137,8 @@ services:
 
   viewer:
     image: quay.io/acend/microservices-lab-kafka-viewer:latest
+    hostname: viewer
+    container_name: kafka-viewer
     ports:
       - 8082:8080
     networks:
