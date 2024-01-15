@@ -47,10 +47,10 @@ Complete code for all labs can be found here:
 
 In the following labs you will find sections marked with the following blocks.
 
-#### Hints
 
-We usually provide help for a task you have to complete. For example if you have to implement a method you most likely find the 
-solution in a _Task Hint_ like this one:
+### Hints
+
+We usually provide help for a task you have to complete. For example if you have to implement a method you most likely find the solution in a _Task Hint_ like this one:
 
 {{% details title="Task Hint" %}}
 Your method should look like this:
@@ -65,7 +65,7 @@ public class HelloWorldApp {
 {{% /details %}}
 
 
-#### No changes needed
+### No changes needed
 
 This means that the implementation of this section is time-consuming and have already been implemented to focus on other details. The changes made are described, and you can read the section.
 
@@ -74,7 +74,7 @@ This means that the implementation of this section is time-consuming and have al
 {{% /whenLabDuration %}}
 
 
-#### Advanced Content
+### Advanced Content
 
 This means that this section is optional and we do not require you to complete the section.
 
