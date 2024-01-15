@@ -1,8 +1,13 @@
 ---
-title: "5. Debezium with Outbox Pattern"
+title: "5. Debezium with Outbox Pattern (optional)"
 weight: 1
 sectionnumber: 5
 ---
+
+{{% whenSectionType "optional" %}}
+{{% alert title="Optional Section" color="optional" %}} {{% param "optional-text" %}} {{% /alert %}}
+{{% /whenSectionType %}}
+
 
 ## Introduction
 

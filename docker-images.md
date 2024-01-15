@@ -1,5 +1,6 @@
 # Docker Images
 
+
 ## Public Images
 
 Following Images are used
@@ -29,12 +30,14 @@ Following Lab specific images are used
 * quay.io/acend/microservices-lab-rest-order:latest (Final Solution including LRA)
 * quay.io/acend/microservices-lab-rest-stock:latest (including LRA)
 
+
 ### 4. Event Driven Architecture
 
 * quay.io/acend/microservices-lab-kafka-order:latest
 * quay.io/acend/microservices-lab-kafka-stock:latest
 * quay.io/acend/microservices-lab-debezium-kafka:latest
 * quay.io/acend/microservices-lab-kafka-viewer:latest
+
 
 ### 5. Debezium with Outbox Pattern
 
