@@ -104,6 +104,7 @@
         .container {
             display: flex;
             width: 100%;
+            font-size:0.8em;
         }
 
         li {
@@ -168,7 +169,7 @@
     }
 
     function ts() {
-        return "<span class=\"ts\">" + new Date() + "</span>"
+        return "<span class=\"ts\">" + new Date().toISOString() + "</span>"
     }
 </script>
 

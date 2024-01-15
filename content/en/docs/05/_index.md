@@ -50,5 +50,5 @@ At the end of this lab our environment is expected to look like this. In compari
 
 
 [^1]: Transactional Outbox Pattern: https://microservices.io/patterns/data/transactional-outbox.html
-[^2]: Outbox Event Router: https://debezium.io/documentation/reference/configuration/outbox-event-router.htm
+[^2]: Outbox Event Router: https://debezium.io/documentation/reference/1.6/transformations/outbox-event-router.html
 [^3]: Change Data Capture: https://en.wikipedia.org/wiki/Change_data_capture

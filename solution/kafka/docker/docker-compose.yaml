@@ -65,7 +65,7 @@ services:
       - 3888:3888
 
   kafka:
-    image: quay.io/puzzle/microservices-lab-debezium-kafka:latest
+    image: quay.io/acend/microservices-lab-debezium-kafka:latest
     hostname: kafka
     container_name: debezium-kafka
     ports:

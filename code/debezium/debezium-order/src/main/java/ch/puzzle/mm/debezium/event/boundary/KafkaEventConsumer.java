@@ -25,6 +25,8 @@ public class KafkaEventConsumer {
     private static final Logger logger = LoggerFactory.getLogger(KafkaEventConsumer.class);
 
     @Inject
+    StockEventHandler stockEventHandler;
+    @Inject
     Tracer tracer;
 
     public CompletionStage<Void> onMessage(KafkaRecord<String, String> message) {
