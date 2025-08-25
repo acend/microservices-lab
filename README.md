@@ -3,7 +3,7 @@
 Microservices Basics
 
 
-## Build LABs using Docker
+## Build LAB using Docker
 
 To build and run for example the monolith lab use the following steps.
 
